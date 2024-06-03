@@ -64,7 +64,7 @@ class SignUp : ComponentActivity() {
     }
 
     private fun addUserToDatabase(name: String, email: String, uid: String) {
-        mDbRef = FirebaseDatabase.getInstance().getReference("users")
+        mDbRef = FirebaseDatabase.getInstance().getReference("user")
 
         val user = User(name, email, uid)
         mDbRef.child(uid).setValue(user)
